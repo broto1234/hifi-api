@@ -1,0 +1,754 @@
+[
+  {
+    "id": 100,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/cd_afspillere/creek_classic_cd.jpg",
+    "categories": "CD Afspillere",
+    "brand": "Creek",
+    "type": "Classic CD Player",
+    "output": "2V RMS",
+    "price": "4,999.00",
+    "colors": [
+      "Black",
+      "Silver"
+    ],
+    "description": "Creek’s Classic CD Player delivers rich, warm analog sound via a precision laser transport and quality DAC.",
+    "specifications": {
+      "output": "2V RMS",
+      "chassis": "aluminum",
+      "dac type": "Crystal 24-bit",
+      "jitter reduction": "Yes",
+      "balanced analog stage": "No",
+      "power supply": "regulated",
+      "transport mechanism": "precision",
+      "error correction": "advanced",
+      "clock": "low-jitter",
+      "vibration damping": "feet",
+      "design": "classic",
+      "audio components": "premium",
+      "sound signature": "warm-detail",
+      "input type": "CD",
+      "format support": "CD, CD-R, CD-RW",
+      "remote control": "included",
+      "dimensions": "430x310x90 mm",
+      "weight": "6 kg"
+    }
+  },
+  {
+    "id": 101,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/cd_afspillere/creek_Destiny_CD.jpg",
+    "categories": "CD Afspillere",
+    "brand": "Creek",
+    "type": "Destiny CD Player",
+    "output": "2.1V RMS",
+    "price": "5,999.00",
+    "colors": [
+      "Black"
+    ],
+    "description": "High-end CD player with upgraded DAC stage and premium circuit layout for extra clarity.",
+    "specifications": {
+      "output": "2.1V RMS",
+      "chassis": "steel",
+      "dac type": "ESS Sabre",
+      "jitter reduction": "Yes",
+      "balanced analog stage": "Yes",
+      "power supply": "dual linear",
+      "transport mechanism": "precision",
+      "error correction": "advanced",
+      "clock": "ultra-low-jitter",
+      "vibration damping": "internal",
+      "design": "modern",
+      "audio components": "audiophile-grade",
+      "sound signature": "transparent",
+      "input type": "CD",
+      "format support": "CD, CD-R, CD-RW",
+      "remote control": "included",
+      "dimensions": "430x320x95 mm",
+      "weight": "7 kg"
+    }
+  },
+  {
+    "id": 102,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/cd_afspillere/creek_evo_cd.jpg",
+    "categories": "CD Afspillere",
+    "brand": "Creek",
+    "type": "Evo CD Player",
+    "output": "2V RMS",
+    "price": "5,499.00",
+    "colors": [
+      "Silver"
+    ],
+    "description": "Evo CD player combining elegant design with excellent performance—great clarity, low noise.",
+    "specifications": {
+      "output": "2V RMS",
+      "chassis": "brushed aluminum",
+      "dac type": "Burr-Brown",
+      "jitter reduction": "Yes",
+      "balanced analog stage": "No",
+      "power supply": "linear",
+      "transport mechanism": "precision",
+      "error correction": "standard",
+      "clock": "low-jitter",
+      "vibration damping": "Soft feet",
+      "design": "sleek",
+      "audio components": "high quality",
+      "sound signature": "neutral",
+      "input type": "CD",
+      "format support": "CD, CD-R, CD-RW",
+      "remote control": "included",
+      "dimensions": "440x320x90 mm",
+      "weight": "6.2 kg"
+    }
+  },
+  {
+    "id": 103,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/cd_afspillere/Exp_2010S_CD.gif",
+    "categories": "CD Afspillere",
+    "brand": "Exposure",
+    "type": "2010S CD Player",
+    "output": "2V RMS",
+    "price": "6,999.00",
+    "colors": [
+      "Black"
+    ],
+    "description": "Exposure’s 2010S delivers sweet analog sound with rock-solid build, full-featured and reliable.",
+    "specifications": {
+      "output": "2V RMS",
+      "chassis": "steel",
+      "dac type": "high-grade Burr-Brown",
+      "jitter reduction": "Yes",
+      "balanced analog stage": "Yes",
+      "power supply": "dual transformers",
+      "transport mechanism": "precision",
+      "error correction": "high",
+      "clock": "low-jitter",
+      "vibration damping": "internal",
+      "design": "classic",
+      "audio components": "high-end",
+      "sound signature": "musical",
+      "input type": "CD",
+      "format support": "CD, CD-R, CD-RW",
+      "remote control": "included",
+      "dimensions": "450x350x105 mm",
+      "weight": "8 kg"
+    }
+  },
+  {
+    "id": 104,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/dvdafspillere/creek_classic.jpg",
+    "categories": "DVD Afspillere",
+    "brand": "Creek",
+    "type": "Classic DVD Player",
+    "output": "Composite & Optical",
+    "price": "3,999.00",
+    "colors": [
+      "Black"
+    ],
+    "description": "Classic DVD player from Creek with solid build, good video and audio output.",
+    "specifications": {
+      "output": "Composite, Optical",
+      "chassis": "steel",
+      "dac type": "24-bit",
+      "jitter reduction": "Yes",
+      "digital outputs": "Optical, Coaxial",
+      "formats supported": "DVD, CD, VCD",
+      "remote control": "included",
+      "dimensions": "430x320x90 mm",
+      "weight": "5 kg"
+    }
+  },
+  {
+    "id": 105,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/dvdafspillere/exposure_2010S.jpg",
+    "categories": "DVD Afspillere",
+    "brand": "Exposure",
+    "type": "2010S DVD Player",
+    "output": "HDMI, Optical",
+    "price": "5,999.00",
+    "colors": [
+      "Silver"
+    ],
+    "description": "High-quality Exposure DVD player, HDMI output, builds on 2010S audio sibling’s pedigree.",
+    "specifications": {
+      "output": "HDMI, Optical",
+      "chassis": "anodized aluminum",
+      "video chip": "wire-grade",
+      "audio chip": "24-bit DAC",
+      "remote control": "included",
+      "dimensions": "450x350x105 mm",
+      "weight": "7 kg"
+    }
+  },
+  {
+    "id": 106,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/dvdafspillere/parasound_d200.jpg",
+    "categories": "DVD Afspillere",
+    "brand": "Parasound",
+    "type": "D200 DVD Transport",
+    "output": "S/PDIF",
+    "price": "4,499.00",
+    "colors": [
+      "Black"
+    ],
+    "description": "Parasound’s D-200 is a pure DVD transport with excellent digital out for connection to dedicated DACs.",
+    "specifications": {
+      "output": "Coaxial, Optical",
+      "chassis": "steel",
+      "remote control": "included",
+      "format support": "DVD, CD"
+    }
+  },
+  {
+    "id": 107,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/dvdafspillere/parasound_halod3.jpg",
+    "categories": "DVD Afspillere",
+    "brand": "Parasound",
+    "type": "Halo D-3 DVD Player",
+    "output": "HDMI, Optical, Coaxial",
+    "price": "6,999.00",
+    "colors": [
+      "Silver"
+    ],
+    "description": "Flagship DVD player from Parasound’s Halo series, full HD video, audiophile sound.",
+    "specifications": {
+      "output": "HDMI, Optical, Coaxial",
+      "chassis": "anodized aluminum",
+      "upscaling": "Yes",
+      "video chip": "high performance",
+      "audio DAC": "24-bit",
+      "remote control": "remote and trigger"
+    }
+  },
+  {
+    "id": 108,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/effektforstaerkere/manley_mahi.jpg",
+    "categories": "Effektforstaerkere",
+    "brand": "Manley",
+    "type": "Mahi Integrated",
+    "output": "50 W",
+    "price": "15,999.00",
+    "colors": [
+      "Black"
+    ],
+    "description": "Manley Mahi is a high-current, low-feedback push-pull tube integrated amplifier with Sabre DAC on board.",
+    "specifications": {
+      "output": "50 W per channel",
+      "tubes": "KT88",
+      "dac type": "AKM Sabre",
+      "remote control": "included",
+      "chassis": "steel",
+      "weight": "24 kg"
+    }
+  },
+  {
+    "id": 109,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/effektforstaerkere/manley_neoclassic300b.jpg",
+    "categories": "Effektforstaerkere",
+    "brand": "Manley",
+    "type": "Neo-Classic 300B",
+    "output": "18 W",
+    "price": "19,999.00",
+    "colors": [
+      "Silver"
+    ],
+    "description": "Manley Neo-Classic 300B is a pure single-ended tube power amp using 300B triodes for rich musicality.",
+    "specifications": {
+      "output": "18 W per channel",
+      "tubes": "300B",
+      "chassis": "anodized aluminum",
+      "weight": "26 kg"
+    }
+  },
+  {
+    "id": 110,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/effektforstaerkere/manley_snapper.jpg",
+    "categories": "Effektforstaerkere",
+    "brand": "Manley",
+    "type": "Snapper Hybrid Power Amp",
+    "output": "150 W",
+    "price": "13,999.00",
+    "colors": [
+      "Black"
+    ],
+    "description": "Snapper combines a tube preamp with solid-state power stage for high-output, low distortion.",
+    "specifications": {
+      "output": "150 W",
+      "tubes": "12AX7",
+      "chassis": "steel",
+      "weight": "18 kg"
+    }
+  },
+  {
+    "id": 111,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/forforstaerkere/parasound_halop3.jpg",
+    "categories": "Effektforstaerkere",
+    "brand": "Parasound",
+    "type": "Halo A-23 Power Amp",
+    "output": "100 W",
+    "price": "8,999.00",
+    "colors": [
+      "Silver"
+    ],
+    "description": "Reliable and sonic Halo power amplifier with elegant styling and solid 100 W output.",
+    "specifications": {
+      "output": "100 W per channel",
+      "chassis": "aluminum",
+      "weight": "12 kg"
+    }
+  },
+  {
+    "id": 112,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/forforstaerkere/Creek_OBH_22_Passive_Preamp.jpg",
+    "categories": "Forforstaerkere",
+    "brand": "Creek",
+    "type": "OBH-22 Passive Preamp",
+    "output": "Passive",
+    "price": "2,999.00",
+    "colors": [
+      "Silver"
+    ],
+    "description": "Two-knob precision passive preamplifier from Creek with beautiful build and sonic neutrality.",
+    "specifications": {
+      "type": "Passive",
+      "chassis": "steel",
+      "remote control": "via IR passthrough",
+      "weight": "4 kg"
+    }
+  },
+  {
+    "id": 113,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/forforstaerkere/parasound_classic7100.jpg",
+    "categories": "Forforstaerkere",
+    "brand": "Parasound",
+    "type": "Classic 7100 Tube Preamplifier",
+    "output": "Line / Head-Amp",
+    "price": "7,999.00",
+    "colors": [
+      "Black"
+    ],
+    "description": "Classic 7100 is a balanced tube preamp with MM phono stage and plenty of inputs.",
+    "specifications": {
+      "tubes": "12AX7",
+      "phono": "MM",
+      "balanced": "Yes",
+      "chassis": "steel",
+      "weight": "10 kg"
+    }
+  },
+  {
+    "id": 114,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/forforstaerkere/parasound_halop3.jpg",
+    "categories": "Forforstaerkere",
+    "brand": "Parasound",
+    "type": "Halo P-3 Tube Preamplifier",
+    "output": "Line",
+    "price": "10,999.00",
+    "colors": [
+      "Silver"
+    ],
+    "description": "P-3 builds on Classic design with improved phono, more inputs and refined sound.",
+    "specifications": {
+      "tubes": "12AX7",
+      "phono": "MM/MC",
+      "balanced": "Yes",
+      "chassis": "anodized aluminum",
+      "weight": "11 kg"
+    }
+  },
+  {
+    "id": 115,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/forforstaerkere/Project_prebox.jpg",
+    "categories": "Forforstaerkere",
+    "brand": "Pro-Ject",
+    "type": "Pre Box RS Digital Preamp",
+    "output": "Line",
+    "price": "4,499.00",
+    "colors": [
+      "Black"
+    ],
+    "description": "Ultra-compact preamplifier with Burr-Brown DAC, RIAA phono and USB input.",
+    "specifications": {
+      "dac type": "Burr-Brown PCM5102",
+      "phono": "MM",
+      "usb": "Yes",
+      "chassis": "steel",
+      "weight": "1 kg"
+    }
+  },
+  {
+    "id": 116,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/hojtalere/boesendorfer_vcs_wall.gif",
+    "categories": "Højtalere",
+    "brand": "Bösendorfer",
+    "type": "VCS Wall Speaker",
+    "price": "24,999.00",
+    "colors": [
+      "White"
+    ],
+    "description": "Elegant wall-mount speaker from Bösendorfer, designed for music rooms and piano accompaniment.",
+    "specifications": {
+      "configuration": "2-way",
+      "frequency response": "45Hz-20kHz",
+      "sensitivity": "88dB",
+      "impedance": "4 Ω",
+      "weight": "12 kg"
+    }
+  },
+  {
+    "id": 117,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/hojtalere/epos_m5.gif",
+    "categories": "Højtalere",
+    "brand": "EPOS",
+    "type": "M5 Mini Monitor",
+    "price": "7,999.00",
+    "colors": [
+      "Black"
+    ],
+    "description": "Small nearfield monitor with accurate midrange and silky highs - ideal for audiophile desktop setups.",
+    "specifications": {
+      "configuration": "2-way",
+      "frequency response": "55Hz-25kHz",
+      "sensitivity": "86dB",
+      "impedance": "6 Ω",
+      "weight": "6 kg"
+    }
+  },
+  {
+    "id": 118,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/hojtalere/harbeth_hl7es2.jpg",
+    "categories": "Højtalere",
+    "brand": "Harbeth",
+    "type": "HL7ES-2 Monitor",
+    "price": "11,999.00",
+    "colors": [
+      "Oak"
+    ],
+    "description": "Fully capable bookshelf speaker with Harbeth’s musical midrange and natural presentation.",
+    "specifications": {
+      "configuration": "2.5-way",
+      "frequency response": "45Hz-20kHz",
+      "sensitivity": "86dB",
+      "impedance": "6 Ω",
+      "weight": "10 kg"
+    }
+  },
+  {
+    "id": 119,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/hojtalere/harbeth_monitor30.jpg",
+    "categories": "Højtalere",
+    "brand": "Harbeth",
+    "type": "Monitor 30 Speaker",
+    "price": "17,999.00",
+    "colors": [
+      "Walnut"
+    ],
+    "description": "Large floor-stand harbeth Monitor 30 with extended bass and exquisite tone balance.",
+    "specifications": {
+      "configuration": "2-way",
+      "frequency response": "34Hz-22kHz",
+      "sensitivity": "88dB",
+      "impedance": "6 Ω",
+      "weight": "22 kg"
+    }
+  },
+  {
+    "id": 120,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/hojtalere/harbeth_p3es2.jpg",
+    "categories": "Højtalere",
+    "brand": "Harbeth",
+    "type": "P3ES-2 Monitor",
+    "price": "8,999.00",
+    "colors": [
+      "Red Oak"
+    ],
+    "description": "Compact bookshelf speaker from Harbeth with vivid musicality and mid-centric clarity.",
+    "specifications": {
+      "configuration": "2-way",
+      "frequency response": "55Hz-20kHz",
+      "sensitivity": "87dB",
+      "impedance": "6 Ω",
+      "weight": "8 kg"
+    }
+  },
+  {
+    "id": 121,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/int_forstaerkere/creek_a50I.jpg",
+    "categories": "Integrerede Forstærkere",
+    "brand": "Creek",
+    "type": "A50I Integrated Amp",
+    "output": "50 W",
+    "price": "4,499.00",
+    "colors": [
+      "Silver"
+    ],
+    "description": "Compact 50 W integrated amp from Creek; great tonal neutrality and good feature set (MM phono, remote).",
+    "specifications": {
+      "output": "50 W",
+      "phono": "MM",
+      "remote control": "included",
+      "chassis": "steel",
+      "weight": "7 kg"
+    }
+  },
+  {
+    "id": 122,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/int_forstaerkere/creek_classic5350SE.jpg",
+    "categories": "Integrerede Forstærkere",
+    "brand": "Creek",
+    "type": "Classic 5350 SE Amp",
+    "output": "125 W",
+    "price": "8,999.00",
+    "colors": [
+      "Black"
+    ],
+    "description": "Classic 5350 Special Edition is a robust integrated amp with balanced outputs and classic sound.",
+    "specifications": {
+      "output": "2x125 W",
+      "phono": "MM/MC",
+      "balanced": "Yes",
+      "chassis": "steel",
+      "weight": "12 kg"
+    }
+  },
+  {
+    "id": 123,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/int_forstaerkere/creek_destinyamp.jpg",
+    "categories": "Integrerede Forstærkere",
+    "brand": "Creek",
+    "type": "Destiny Integrated Amp",
+    "output": "100 W",
+    "price": "10,999.00",
+    "colors": [
+      "Silver"
+    ],
+    "description": "Destiny integrated from Creek with upgraded preamp and ample power for demanding speakers.",
+    "specifications": {
+      "output": "2x100 W",
+      "phono": "MM/MC",
+      "balanced": "Yes",
+      "chassis": "steel",
+      "weight": "14 kg"
+    }
+  },
+  {
+    "id": 124,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/int_forstaerkere/manley_snapper.jpg",
+    "categories": "Integrerede Forstærkere",
+    "brand": "Manley",
+    "type": "Snapper Hybrid Pre/Power",
+    "output": "150 W",
+    "price": "13,999.00",
+    "colors": [
+      "Black"
+    ],
+    "description": "Hybrid pre/power amp with tube front-end and solid-state output—clean, powerful, musical.",
+    "specifications": {
+      "output": "150 W",
+      "tubes": "12AX7",
+      "chassis": "steel",
+      "weight": "18 kg"
+    }
+  },
+  {
+    "id": 125,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/int_forstaerkere/Manley_Stingray.jpg",
+    "categories": "Integrerede Forstærkere",
+    "brand": "Manley",
+    "type": "Stingray II Integrated",
+    "output": "75 W",
+    "price": "17,999.00",
+    "colors": [
+      "Silver"
+    ],
+    "description": "Manley Stingray II tube hybrid integrated amp with Sabre DAC and MM/MC phono.",
+    "specifications": {
+      "output": "75 W",
+      "tubes": "6C45P",
+      "dac type": "AKM",
+      "phono": "MM/MC",
+      "weight": "20 kg"
+    }
+  },
+  {
+    "id": 126,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/pladespillere/Pro_ject_Debut_3_bl.jpg",
+    "categories": "Pladespillere",
+    "brand": "Pro-Ject",
+    "type": "Debut 3 (Black)",
+    "price": "2,499.00",
+    "colors": [
+      "Black"
+    ],
+    "description": "Entry-level turntable with Ortofon OM-10 cartridge, lightweight tonearm and acrylic platter.",
+    "specifications": {
+      "speed": "33/45 RPM",
+      "tonearm": "aluminum",
+      "cartridge": "OM-10",
+      "weight": "4 kg"
+    }
+  },
+  {
+    "id": 127,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/pladespillere/Pro_ject_Debut_III_red_1.jpg",
+    "categories": "Pladespillere",
+    "brand": "Pro-Ject",
+    "type": "Debut III (Red)",
+    "price": "3,199.00",
+    "colors": [
+      "Red"
+    ],
+    "description": "Red lacquer edition of Debut LLL, with upgraded platter and belt-drive design.",
+    "specifications": {
+      "speed": "33/45 RPM",
+      "tonearm": "aluminum",
+      "cartridge": "OM-10",
+      "weight": "4.2 kg"
+    }
+  },
+  {
+    "id": 128,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/pladespillere/Pro_ject_Debut_III_yellow_1.jpg",
+    "categories": "Pladespillere",
+    "brand": "Pro-Ject",
+    "type": "Debut III (Yellow)",
+    "price": "3,199.00",
+    "colors": [
+      "Yellow"
+    ],
+    "description": "Yellow lacquer Debut LLL; same features as red version — stylish and sonically rewarding.",
+    "specifications": {
+      "speed": "33/45 RPM",
+      "tonearm": "aluminum",
+      "cartridge": "OM-10",
+      "weight": "4.2 kg"
+    }
+  },
+  {
+    "id": 129,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/pladespillere/Pro_ject_rpm_5.jpg",
+    "categories": "Pladespillere",
+    "brand": "Pro-Ject",
+    "type": "RPM 5 Carbon",
+    "price": "6,999.00",
+    "colors": [
+      "Black"
+    ],
+    "description": "RPM 5 Carbon turntable with carbon tonearm, precision bearing, and sleek design.",
+    "specifications": {
+      "speed": "33/45 RPM",
+      "tonearm": "carbon",
+      "weight": "6 kg"
+    }
+  },
+  {
+    "id": 130,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/pladespillere/Pro_ject_rpm10.jpg",
+    "categories": "Pladespillere",
+    "brand": "Pro-Ject",
+    "type": "RPM 10.0 Carbon",
+    "price": "9,999.00",
+    "colors": [
+      "Black"
+    ],
+    "description": "High-end RPM 10 turntable with carbon tonearm, inverted bearing and silent motor.",
+    "specifications": {
+      "speed": "33/45 RPM",
+      "tonearm": "carbon",
+      "weight": "7 kg"
+    }
+  },
+  {
+    "id": 131,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/roer_forstaerkere/Jolida_JD102b.jpg",
+    "categories": "Rørforstærkere",
+    "brand": "Jolida",
+    "type": "JD 102B Tube Amp",
+    "output": "10 W",
+    "price": "3,999.00",
+    "colors": [
+      "Black"
+    ],
+    "description": "Compact single-ended tube amplifier based on 2A3/300B design, sweet and musical.",
+    "specifications": {
+      "output": "10 W per channel",
+      "tubes": "300B",
+      "chassis": "steel",
+      "weight": "8 kg"
+    }
+  },
+  {
+    "id": 132,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/roer_forstaerkere/Jolida_JD202a.jpg",
+    "categories": "Rørforstærkere",
+    "brand": "Jolida",
+    "type": "JD-202A Tube Amp",
+    "output": "25 W",
+    "price": "4,999.00",
+    "colors": [
+      "Silver"
+    ],
+    "description": "25 W tube amp in push-pull configuration, delivering clean and warm tube tone.",
+    "specifications": {
+      "output": "25 W per channel",
+      "tubes": "EL84",
+      "chassis": "steel",
+      "weight": "10 kg"
+    }
+  },
+  {
+    "id": 133,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/roer_forstaerkere/Jolida_JD300b.jpg",
+    "categories": "Rørforstærkere",
+    "brand": "Jolida",
+    "type": "JD-300B Tube Amp",
+    "output": "18 W",
+    "price": "8,999.00",
+    "colors": [
+      "Black"
+    ],
+    "description": "Single-ended 300B tube amplifier, rich midrange and full-bodied tonality.",
+    "specifications": {
+      "output": "18 W per channel",
+      "tubes": "300B",
+      "chassis": "steel",
+      "weight": "14 kg"
+    }
+  },
+  {
+    "id": 134,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/roer_forstaerkere/Jolida_JD302b.jpg",
+    "categories": "Rørforstærkere",
+    "brand": "Jolida",
+    "type": "JD-302B Tube Amp",
+    "output": "20 W",
+    "price": "9,999.00",
+    "colors": [
+      "Silver"
+    ],
+    "description": "Advanced 300B tube amp with upgraded components for smoother dynamics.",
+    "specifications": {
+      "output": "20 W per channel",
+      "tubes": "300B",
+      "chassis": "aluminum",
+      "weight": "15 kg"
+    }
+  },
+  {
+    "id": 135,
+    "image": "https://hifi-horizon-super-team.netlify.app/Produktbilleder/roer_forstaerkere/Jolida_JD502b.jpg",
+    "categories": "Rørforstærkere",
+    "brand": "Jolida",
+    "type": "JD-502B Tube Amp",
+    "output": "40 W",
+    "price": "12,999",
+    "colors": [
+      "Black"
+    ],
+    "description": "Powerful 40 W 300B tube amplifier, dynamic yet musical—great for demanding speakers.",
+    "specifications": {
+      "output": "40 W per channel",
+      "tubes": "300B",
+      "chassis": "steel",
+      "weight": "18 kg"
+    }
+  }
+]
