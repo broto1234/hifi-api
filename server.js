@@ -1,17 +1,24 @@
 import express from "express";
 import bcrypt from "bcrypt";
 import fs from "fs-extra";
+import path from "path";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Middleware
 app.use(express.json());
+app.use(express.static("public")); // ✅ Serve all images & static assets
 
 // === Helper Functions ===
 async function readJSON(file) {
   await fs.ensureFile(file);
   const content = await fs.readFile(file, "utf-8");
-  return content.trim() ? JSON.parse(content) : (file.includes("users") ? { users: [] } : []);
+  return content.trim()
+    ? JSON.parse(content)
+    : file.includes("users")
+    ? { users: [] }
+    : [];
 }
 
 async function writeJSON(file, data) {
@@ -19,52 +26,59 @@ async function writeJSON(file, data) {
 }
 
 // === USERS & AUTH ===
-//Route to get all users (for testing purposes)
 app.get("/users", async (req, res) => {
   const data = await readJSON("data/users.json");
   res.json(data);
 });
 
-//Route for user registration
 app.post("/register", async (req, res) => {
   const { id, email, username, password } = req.body;
 
   if (!id || !email || !username || !password) {
-    return res.status(400).json({ message: "id, email, username & password required" });
+    return res
+      .status(400)
+      .json({ message: "id, email, username & password required" });
   }
 
   const data = await readJSON("data/users.json");
 
-  // Check if id, email, or username already exists
-  const exists = data.users.find( u => 
-     u.id === id || 
-     u.email === email || 
-     (u.username && username && u.username.toLowerCase() === username.toLowerCase())
+  const exists = data.users.find(
+    (u) =>
+      u.id === id ||
+      u.email === email ||
+      (u.username &&
+        username &&
+        u.username.toLowerCase() === username.toLowerCase())
   );
-  if (exists) return res.status(400).json({ message: "User with same id/email/username exists" });
 
-  // Hash the password
+  if (exists)
+    return res
+      .status(400)
+      .json({ message: "User with same id/email/username exists" });
+
   const hash = await bcrypt.hash(password, 12);
-
   data.users.push({ id, email, username, password: hash });
   await writeJSON("data/users.json", data);
 
   res.status(201).json({ message: "User registered successfully" });
 });
 
-
-//Route for user login
 app.post("/login", async (req, res) => {
-  const { identifier, password } = req.body; // identifier = id/email/username
-  
-  if (!identifier || !password) return res.status(400).json({ message: "identifier & password required" });
+  const { identifier, password } = req.body;
+  if (!identifier || !password)
+    return res
+      .status(400)
+      .json({ message: "identifier & password required" });
 
   const data = await readJSON("data/users.json");
 
-  const user = data.users.find(u =>
-    (u.id == identifier) ||
-    (u.email === identifier) ||
-    (u.username && identifier && u.username.toLowerCase() === identifier.toLowerCase())
+  const user = data.users.find(
+    (u) =>
+      u.id == identifier ||
+      u.email === identifier ||
+      (u.username &&
+        identifier &&
+        u.username.toLowerCase() === identifier.toLowerCase())
   );
 
   if (!user) return res.status(401).json({ message: "Invalid credentials" });
@@ -72,29 +86,64 @@ app.post("/login", async (req, res) => {
   const match = await bcrypt.compare(password, user.password);
   if (!match) return res.status(401).json({ message: "Invalid credentials" });
 
-  res.json({ message: "Login successful", userId: user.id, username: user.username });
+  res.json({
+    message: "Login successful",
+    userId: user.id,
+    username: user.username,
+  });
 });
-
 
 // === PRODUCTS ===
 app.get("/products", async (req, res) => {
   const products = await readJSON("data/products.json");
-  res.json(products);
+
+  // 👇 Auto-generate full image URLs
+  const baseUrl = `${req.protocol}://${req.get("host")}/`;
+  const updatedProducts = products.map((p) => ({
+    ...p,
+    image: p.image.startsWith("http")
+      ? p.image
+      : `${baseUrl}${p.image}`, // Only prepend if not already full URL
+  }));
+
+  res.json(updatedProducts);
 });
 
 app.get("/products/:param", async (req, res) => {
   const products = await readJSON("data/products.json");
   const param = req.params.param.toLowerCase();
 
-  const product = products.find(p => (p.id == param) || (p.name && p.name.toLowerCase() === param));
-  if (!product) return res.status(404).json({ message: "Product not found" });
-  res.json(product);
+  const product = products.find(
+    (p) => p.id == param || (p.name && p.name.toLowerCase() === param)
+  );
+
+  if (!product)
+    return res.status(404).json({ message: "Product not found" });
+
+  // Add full image URL for this one product
+  const baseUrl = `${req.protocol}://${req.get("host")}/`;
+  const productWithImage = {
+    ...product,
+    image: product.image.startsWith("http")
+      ? product.image
+      : `${baseUrl}${product.image}`,
+  };
+
+  res.json(productWithImage);
 });
 
 // === ABOUT ===
 app.get("/about", async (req, res) => {
   const about = await readJSON("data/about.json");
-  res.json(about);
+  const baseUrl = `${req.protocol}://${req.get("host")}/`;
+
+  // 👇 Add full image URLs to about sections
+  const updatedSections = about.sections?.map((s) => ({
+    ...s,
+    image: s.image.startsWith("http") ? s.image : `${baseUrl}${s.image}`,
+  }));
+
+  res.json({ ...about, sections: updatedSections });
 });
 
 // === NEWSLETTER ===
@@ -103,5 +152,7 @@ app.get("/newsletter", async (req, res) => {
   res.json(newsletter);
 });
 
-// Start server
-app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
+// === SERVER START ===
+app.listen(PORT, () =>
+  console.log(`✅ Server running on port ${PORT}`)
+);
