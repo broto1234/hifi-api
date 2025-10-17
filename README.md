@@ -30,12 +30,10 @@ Test endpoints with **Insomnia**. Deployable to **Render.com**.
 ### RESTful API development process
 
 ## 📁 Folder Structure
-
+```bash
 hifi-api/
 ├── data/
-
 │ ├── users.json
-
 │ ├── products.json
 │ ├── about.json
 │ └── newsletter.json
@@ -54,6 +52,7 @@ hifi-api/
 ├── server.js
 ├── package.json
 └── README.md
+```bash
 ---
 
 ### RESTful API deployment process
