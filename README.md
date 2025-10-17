@@ -33,7 +33,9 @@ Test endpoints with **Insomnia**. Deployable to **Render.com**.
 
 hifi-api/
 ├── data/
+
 │ ├── users.json
+
 │ ├── products.json
 │ ├── about.json
 │ └── newsletter.json
