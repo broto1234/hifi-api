@@ -37,6 +37,18 @@ hifi-api/
 │ ├── products.json
 │ ├── about.json
 │ └── newsletter.json
+└── public/
+    ├── Aboutbilleder/
+    │   ├── about.png
+    │   ├── history.png
+    │   └── service.png
+    └── Produktbilleder/
+        ├── cd_images/
+        │   ├── creek.jpg
+        │   └── creek_Destiny.jpg
+        └── dvd/
+            ├── parasound.jpg
+            └── parasound_d.jpg
 ├── server.js
 ├── package.json
 └── README.md
