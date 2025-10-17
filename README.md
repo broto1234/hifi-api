@@ -1,9 +1,10 @@
 # HiFi API — RESTful API with Users, Products, and Newsletter
 
-Building your API with endpoints, users, login, products, etc. → RESTful API development
-Pushing it to Render and accessing it online → Deployment process
-So your full workflow is usually described as:
-“I followed the RESTful API development process, then completed the deployment process on Render.”
+ → RESTful API development process
+
+Pushing it to Render and accessing it online → RESTful API deployment process
+
+I followed the **RESTful API development process** (Building API with endpoints, users, login, products, etc.), then completed the **RESTful API deployment process** on Render (Pushing it to Render and accessing it online).
 
 This is a **Node.js + Express** RESTful API that handles:
 
