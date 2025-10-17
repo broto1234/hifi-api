@@ -119,3 +119,5 @@ After a few minutes, Render gives you a live URL, e.g.:
   https://hifi-api-howz.onrender.com
 
 NB: Use this URL in Insomnia instead of localhost:3000 to test all endpoints online.
+
+https://hifi-api-f4du.onrender.com/users; /products
