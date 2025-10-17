@@ -1,9 +1,5 @@
 # HiFi API — RESTful API with Users, Products, and Newsletter
 
- → RESTful API development process
-
-Pushing it to Render and accessing it online → RESTful API deployment process
-
 I followed the **RESTful API development process** (Building API with endpoints, users, login, products, etc.), then completed the **RESTful API deployment process** on Render (Pushing it to Render and accessing it online).
 
 This is a **Node.js + Express** RESTful API that handles:
@@ -18,7 +14,7 @@ Test endpoints with **Insomnia**. Deployable to **Render.com**.
 
 ---
 
-## 🚀 Features
+### 🚀 Features
 - User registration with password hashing (`bcrypt`)
 - User login and password verification
 - JSON file–based local storage (no database required)
@@ -28,9 +24,9 @@ Test endpoints with **Insomnia**. Deployable to **Render.com**.
 
 ---
 
-### RESTful API development process
+## RESTful API development process
 
-## 📁 Folder Structure
+### 📁 Folder Structure
 ```bash
 hifi-api/
 ├── data/
@@ -53,11 +49,14 @@ hifi-api/
 ├── server.js
 ├── package.json
 └── README.md
+```bash
 ---
 
-### RESTful API deployment process
+## RESTful API development process
 
-## ⚙️ Installation
+## RESTful API deployment process
+
+# ⚙️ Installation
 
 1. Clone or download the project:
 ```bash
@@ -132,5 +131,13 @@ After a few minutes, Render gives you a live URL, e.g.:
   https://hifi-api-howz.onrender.com
 
 NB: Use this URL in Insomnia instead of localhost:3000 to test all endpoints online.
+
+
+Test these URLs in your browser:
+http://localhost:3000/Aboutimages/about.png
+http://localhost:3000/Aboutimages/history.png
+http://localhost:3000/Produckimages/cd_images/creek.jpg
+
+
 
 https://hifi-api-f4du.onrender.com/users; /products
