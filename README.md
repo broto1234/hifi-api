@@ -58,7 +58,7 @@ Test endpoints with **Insomnia**. Deployable to **Render.com**.
 
 1. Clone or download the project:
 ```bash
-   git clone https://github.com/yourusername/hifi-api.git
+   git clone https://github.com/broto1234/hifi-api.git
    cd hifi-api
 ```
 2. Install dependencies:
