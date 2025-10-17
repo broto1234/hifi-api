@@ -1,6 +1,6 @@
 [
   {
-    "id": 100,
+    "id": 1,
     "image": "Produktbilleder/cd_afspillere/creek_classic_cd.jpg",
     "categories": "CD Afspillere",
     "brand": "Creek",
@@ -34,7 +34,7 @@
     }
   },
   {
-    "id": 101,
+    "id": 2,
     "image": "Produktbilleder/cd_afspillere/creek_Destiny_CD.jpg",
     "categories": "CD Afspillere",
     "brand": "Creek",
@@ -67,7 +67,7 @@
     }
   },
   {
-    "id": 102,
+    "id": 3,
     "image": "Produktbilleder/cd_afspillere/creek_evo_cd.jpg",
     "categories": "CD Afspillere",
     "brand": "Creek",
@@ -100,7 +100,7 @@
     }
   },
   {
-    "id": 103,
+    "id": 4,
     "image": "Produktbilleder/cd_afspillere/Exp_2010S_CD.gif",
     "categories": "CD Afspillere",
     "brand": "Exposure",
@@ -133,7 +133,7 @@
     }
   },
   {
-    "id": 104,
+    "id": 5,
     "image": "Produktbilleder/dvdafspillere/creek_classic.jpg",
     "categories": "DVD Afspillere",
     "brand": "Creek",
@@ -157,7 +157,7 @@
     }
   },
   {
-    "id": 105,
+    "id": 6,
     "image": "Produktbilleder/dvdafspillere/exposure_2010S.jpg",
     "categories": "DVD Afspillere",
     "brand": "Exposure",
@@ -179,7 +179,7 @@
     }
   },
   {
-    "id": 106,
+    "id": 7,
     "image": "Produktbilleder/dvdafspillere/parasound_d200.jpg",
     "categories": "DVD Afspillere",
     "brand": "Parasound",
@@ -198,7 +198,7 @@
     }
   },
   {
-    "id": 107,
+    "id": 8,
     "image": "Produktbilleder/dvdafspillere/parasound_halod3.jpg",
     "categories": "DVD Afspillere",
     "brand": "Parasound",
@@ -219,7 +219,7 @@
     }
   },
   {
-    "id": 108,
+    "id": 9,
     "image": "Produktbilleder/effektforstaerkere/manley_mahi.jpg",
     "categories": "Effektforstaerkere",
     "brand": "Manley",
@@ -240,7 +240,7 @@
     }
   },
   {
-    "id": 109,
+    "id": 10,
     "image": "Produktbilleder/effektforstaerkere/manley_neoclassic300b.jpg",
     "categories": "Effektforstaerkere",
     "brand": "Manley",
@@ -259,7 +259,7 @@
     }
   },
   {
-    "id": 110,
+    "id": 11,
     "image": "Produktbilleder/effektforstaerkere/manley_snapper.jpg",
     "categories": "Effektforstaerkere",
     "brand": "Manley",
@@ -278,7 +278,7 @@
     }
   },
   {
-    "id": 111,
+    "id": 12,
     "image": "Produktbilleder/forforstaerkere/parasound_halop3.jpg",
     "categories": "Effektforstaerkere",
     "brand": "Parasound",
@@ -296,7 +296,7 @@
     }
   },
   {
-    "id": 112,
+    "id": 13,
     "image": "Produktbilleder/forforstaerkere/Creek_OBH_22_Passive_Preamp.jpg",
     "categories": "Forforstaerkere",
     "brand": "Creek",
@@ -315,7 +315,7 @@
     }
   },
   {
-    "id": 113,
+    "id": 14,
     "image": "Produktbilleder/forforstaerkere/parasound_classic7100.jpg",
     "categories": "Forforstaerkere",
     "brand": "Parasound",
@@ -335,7 +335,7 @@
     }
   },
   {
-    "id": 114,
+    "id": 15,
     "image": "Produktbilleder/forforstaerkere/parasound_halop3.jpg",
     "categories": "Forforstaerkere",
     "brand": "Parasound",
@@ -355,7 +355,7 @@
     }
   },
   {
-    "id": 115,
+    "id": 16,
     "image": "Produktbilleder/forforstaerkere/Project_prebox.jpg",
     "categories": "Forforstaerkere",
     "brand": "Pro-Ject",
@@ -375,7 +375,7 @@
     }
   },
   {
-    "id": 116,
+    "id": 17,
     "image": "Produktbilleder/hojtalere/boesendorfer_vcs_wall.gif",
     "categories": "Højtalere",
     "brand": "Bösendorfer",
@@ -394,7 +394,7 @@
     }
   },
   {
-    "id": 117,
+    "id": 18,
     "image": "Produktbilleder/hojtalere/epos_m5.gif",
     "categories": "Højtalere",
     "brand": "EPOS",
@@ -413,7 +413,7 @@
     }
   },
   {
-    "id": 118,
+    "id": 19,
     "image": "Produktbilleder/hojtalere/harbeth_hl7es2.jpg",
     "categories": "Højtalere",
     "brand": "Harbeth",
@@ -432,7 +432,7 @@
     }
   },
   {
-    "id": 119,
+    "id": 20,
     "image": "Produktbilleder/hojtalere/harbeth_monitor30.jpg",
     "categories": "Højtalere",
     "brand": "Harbeth",
@@ -451,7 +451,7 @@
     }
   },
   {
-    "id": 120,
+    "id": 21,
     "image": "Produktbilleder/hojtalere/harbeth_p3es2.jpg",
     "categories": "Højtalere",
     "brand": "Harbeth",
@@ -470,7 +470,7 @@
     }
   },
   {
-    "id": 121,
+    "id": 22,
     "image": "Produktbilleder/int_forstaerkere/creek_a50I.jpg",
     "categories": "Integrerede Forstærkere",
     "brand": "Creek",
@@ -490,7 +490,7 @@
     }
   },
   {
-    "id": 122,
+    "id": 23,
     "image": "Produktbilleder/int_forstaerkere/creek_classic5350SE.jpg",
     "categories": "Integrerede Forstærkere",
     "brand": "Creek",
@@ -510,7 +510,7 @@
     }
   },
   {
-    "id": 123,
+    "id": 24,
     "image": "Produktbilleder/int_forstaerkere/creek_destinyamp.jpg",
     "categories": "Integrerede Forstærkere",
     "brand": "Creek",
@@ -530,7 +530,7 @@
     }
   },
   {
-    "id": 124,
+    "id": 25,
     "image": "Produktbilleder/int_forstaerkere/manley_snapper.jpg",
     "categories": "Integrerede Forstærkere",
     "brand": "Manley",
@@ -549,7 +549,7 @@
     }
   },
   {
-    "id": 125,
+    "id": 26,
     "image": "Produktbilleder/int_forstaerkere/Manley_Stingray.jpg",
     "categories": "Integrerede Forstærkere",
     "brand": "Manley",
@@ -569,7 +569,7 @@
     }
   },
   {
-    "id": 126,
+    "id": 27,
     "image": "Produktbilleder/pladespillere/Pro_ject_Debut_3_bl.jpg",
     "categories": "Pladespillere",
     "brand": "Pro-Ject",
@@ -587,7 +587,7 @@
     }
   },
   {
-    "id": 127,
+    "id": 28,
     "image": "Produktbilleder/pladespillere/Pro_ject_Debut_III_red_1.jpg",
     "categories": "Pladespillere",
     "brand": "Pro-Ject",
@@ -605,7 +605,7 @@
     }
   },
   {
-    "id": 128,
+    "id": 29,
     "image": "Produktbilleder/pladespillere/Pro_ject_Debut_III_yellow_1.jpg",
     "categories": "Pladespillere",
     "brand": "Pro-Ject",
@@ -623,7 +623,7 @@
     }
   },
   {
-    "id": 129,
+    "id": 30,
     "image": "Produktbilleder/pladespillere/Pro_ject_rpm_5.jpg",
     "categories": "Pladespillere",
     "brand": "Pro-Ject",
@@ -640,7 +640,7 @@
     }
   },
   {
-    "id": 130,
+    "id": 31,
     "image": "Produktbilleder/pladespillere/Pro_ject_rpm10.jpg",
     "categories": "Pladespillere",
     "brand": "Pro-Ject",
@@ -657,7 +657,7 @@
     }
   },
   {
-    "id": 131,
+    "id": 32,
     "image": "Produktbilleder/roer_forstaerkere/Jolida_JD102b.jpg",
     "categories": "Rørforstærkere",
     "brand": "Jolida",
@@ -676,7 +676,7 @@
     }
   },
   {
-    "id": 132,
+    "id": 33,
     "image": "Produktbilleder/roer_forstaerkere/Jolida_JD202a.jpg",
     "categories": "Rørforstærkere",
     "brand": "Jolida",
@@ -695,7 +695,7 @@
     }
   },
   {
-    "id": 133,
+    "id": 34,
     "image": "Produktbilleder/roer_forstaerkere/Jolida_JD300b.jpg",
     "categories": "Rørforstærkere",
     "brand": "Jolida",
@@ -714,7 +714,7 @@
     }
   },
   {
-    "id": 134,
+    "id": 35,
     "image": "Produktbilleder/roer_forstaerkere/Jolida_JD302b.jpg",
     "categories": "Rørforstærkere",
     "brand": "Jolida",
@@ -733,7 +733,7 @@
     }
   },
   {
-    "id": 135,
+    "id": 36,
     "image": "Produktbilleder/roer_forstaerkere/Jolida_JD502b.jpg",
     "categories": "Rørforstærkere",
     "brand": "Jolida",
