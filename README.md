@@ -59,7 +59,7 @@ hifi-api/
 ## ⚙️ Installation
 
 1. Clone or download the project:
-   ```bash
+```bash
    git clone https://github.com/yourusername/hifi-api.git
    cd hifi-api
 
