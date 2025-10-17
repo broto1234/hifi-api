@@ -27,36 +27,32 @@ Test endpoints with **Insomnia**. Deployable to **Render.com**.
 ## RESTful API development process
 
 ### 📁 Folder Structure
-
 ```bash
-hifi-api/
-├── data/
-│ ├── users.json
-│ ├── products.json
-│ ├── about.json
-│ └── newsletter.json
-└── public/
-    ├── Aboutbilleder/
-    │   ├── about.png
-    │   ├── history.png
-    │   └── service.png
-    └── Produktbilleder/
-        ├── cd_images/
-        │   ├── creek.jpg
-        │   └── creek_Destiny.jpg
-        └── dvd/
-            ├── parasound.jpg
-            └── parasound_d.jpg
-├── server.js
-├── package.json
-└── README.md
-```bash
-
+  hifi-api/
+  ├── data/
+  │ ├── users.json
+  │ ├── products.json
+  │ ├── about.json
+  │ └── newsletter.json
+  └── public/
+      ├── Aboutbilleder/
+      │   ├── about.png
+      │   ├── history.png
+      │   └── service.png
+      └── Produktbilleder/
+          ├── cd_images/
+          │   ├── creek.jpg
+          │   └── creek_Destiny.jpg
+          └── dvd/
+              ├── parasound.jpg
+              └── parasound_d.jpg
+  ├── server.js
+  ├── package.json
+  └── README.md
+```
 ---
 
-## RESTful API development process
-
-## RESTful API deployment process
+## **RESTful API deployment process**
 
 # ⚙️ Installation
 
@@ -64,14 +60,15 @@ hifi-api/
 ```bash
    git clone https://github.com/yourusername/hifi-api.git
    cd hifi-api
-
+```
 2. Install dependencies:
   ```bash
   npm install
-
+```
 3. Start the server:
   ```bash
   npm start
+```
 
 4. Local API base URL:
 
@@ -114,13 +111,13 @@ Method:POST URL:http://localhost:3000/login
   git add .
   git init
   git commit -m "Initial commit of Hifi API"
-
+```
 2. Create a repo on GitHub and push:
 ```bash
   git remote add origin https://github.com/yourusername/hifi-api.git
   git branch -M main
   git push -u origin main
-
+```
 ## Deploy to Render
 
 1. Go to Render.com → New → Web Service
@@ -135,11 +132,19 @@ After a few minutes, Render gives you a live URL, e.g.:
 NB: Use this URL in Insomnia instead of localhost:3000 to test all endpoints online.
 
 
-Test these URLs in your browser:
-http://localhost:3000/Aboutimages/about.png
-http://localhost:3000/Aboutimages/history.png
-http://localhost:3000/Produckimages/cd_images/creek.jpg
+# Test these URLs in your browser:
+http://localhost:3000/products
 
+http://localhost:3000/users
 
+http://localhost:3000/history
 
-https://hifi-api-f4du.onrender.com/users; /products
+# Render will automatically redeploy your app with the new data.
+
+👉 After deployment, check again:
+
+https://hifi-api-f4du.onrender.com/products
+
+https://hifi-api-f4du.onrender.com/users
+
+and soon ...
