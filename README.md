@@ -52,7 +52,6 @@ hifi-api/
 ├── server.js
 ├── package.json
 └── README.md
-```bash
 ---
 
 ### RESTful API deployment process
