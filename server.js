@@ -2,9 +2,13 @@ import express from "express";
 import bcrypt from "bcrypt";
 import fs from "fs-extra";
 import path from "path";
+import cors from "cors";
 
 const app = express();
+
 const PORT = process.env.PORT || 3000;
+
+app.use(cors()); // allow all origins/routes
 
 // Middleware
 app.use(express.json());
