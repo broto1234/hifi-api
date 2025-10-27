@@ -29,10 +29,50 @@ async function writeJSON(file, data) {
   await fs.writeFile(file, JSON.stringify(data, null, 2));
 }
 
+// app.get("/products", async (req, res) => {
+//   const products = await readJSON("data/products.json"); // uses readJSON
+//   res.json(products);
+// });
+
+// === PRODUCTS ===
 app.get("/products", async (req, res) => {
-  const products = await readJSON("data/products.json"); // uses readJSON
-  res.json(products);
+  const products = await readJSON("data/products.json");
+
+  // 👇 Auto-generate full image URLs
+  const baseUrl = `${req.protocol}://${req.get("host")}/`;
+  const updatedProducts = products.map((p) => ({
+    ...p,
+    image: p.image.startsWith("http")
+      ? p.image
+      : `${baseUrl}${p.image}`, // Only prepend if not already full URL
+  }));
+
+  res.json(updatedProducts);
 });
+
+// app.get("/products/:param", async (req, res) => {
+//   const products = await readJSON("data/products.json");
+//   const param = req.params.param.toLowerCase();
+
+//   const product = products.find(
+//     (p) => p.id == param || (p.name && p.name.toLowerCase() === param)
+//   );
+
+//   if (!product)
+//     return res.status(404).json({ message: "Product not found" });
+
+//   // Add full image URL for this one product
+//   const baseUrl = `${req.protocol}://${req.get("host")}/`;
+//   const productWithImage = {
+//     ...product,
+//     image: product.image.startsWith("http")
+//       ? product.image
+//       : `${baseUrl}${product.image}`,
+//   };
+
+//   res.json(productWithImage);
+// });
+
 
 // === USERS & AUTH ===
 // app.get("/users", async (req, res) => {
@@ -102,44 +142,6 @@ app.get("/products", async (req, res) => {
 //   });
 // });
 
-// === PRODUCTS ===
-// app.get("/products", async (req, res) => {
-//   const products = await readJSON("data/products.json");
-
-//   // 👇 Auto-generate full image URLs
-//   const baseUrl = `${req.protocol}://${req.get("host")}/`;
-//   const updatedProducts = products.map((p) => ({
-//     ...p,
-//     image: p.image.startsWith("http")
-//       ? p.image
-//       : `${baseUrl}${p.image}`, // Only prepend if not already full URL
-//   }));
-
-//   res.json(updatedProducts);
-// });
-
-// app.get("/products/:param", async (req, res) => {
-//   const products = await readJSON("data/products.json");
-//   const param = req.params.param.toLowerCase();
-
-//   const product = products.find(
-//     (p) => p.id == param || (p.name && p.name.toLowerCase() === param)
-//   );
-
-//   if (!product)
-//     return res.status(404).json({ message: "Product not found" });
-
-//   // Add full image URL for this one product
-//   const baseUrl = `${req.protocol}://${req.get("host")}/`;
-//   const productWithImage = {
-//     ...product,
-//     image: product.image.startsWith("http")
-//       ? product.image
-//       : `${baseUrl}${product.image}`,
-//   };
-
-//   res.json(productWithImage);
-// });
 
 // === ABOUT ===
 // app.get("/about", async (req, res) => {
