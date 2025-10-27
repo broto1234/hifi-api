@@ -11,6 +11,7 @@
       "Black",
       "Silver"
     ],
+    "stock": 8,
     "description": "Creek’s Classic CD Player delivers rich, warm analog sound via a precision laser transport and quality DAC.",
     "specifications": {
       "output": "2V RMS",
@@ -44,6 +45,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 5,
     "description": "High-end CD player with upgraded DAC stage and premium circuit layout for extra clarity.",
     "specifications": {
       "output": "2.1V RMS",
@@ -77,6 +79,7 @@
     "colors": [
       "Silver"
     ],
+    "stock": 3,
     "description": "Evo CD player combining elegant design with excellent performance—great clarity, low noise.",
     "specifications": {
       "output": "2V RMS",
@@ -110,6 +113,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 0,
     "description": "Exposure’s 2010S delivers sweet analog sound with rock-solid build, full-featured and reliable.",
     "specifications": {
       "output": "2V RMS",
@@ -143,6 +147,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 8,
     "description": "Classic DVD player from Creek with solid build, good video and audio output.",
     "specifications": {
       "output": "Composite, Optical",
@@ -167,6 +172,7 @@
     "colors": [
       "Silver"
     ],
+    "stock": 4,
     "description": "High-quality Exposure DVD player, HDMI output, builds on 2010S audio sibling’s pedigree.",
     "specifications": {
       "output": "HDMI, Optical",
@@ -189,6 +195,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 10,
     "description": "Parasound’s D-200 is a pure DVD transport with excellent digital out for connection to dedicated DACs.",
     "specifications": {
       "output": "Coaxial, Optical",
@@ -208,6 +215,7 @@
     "colors": [
       "Silver"
     ],
+    "stock": 2,
     "description": "Flagship DVD player from Parasound’s Halo series, full HD video, audiophile sound.",
     "specifications": {
       "output": "HDMI, Optical, Coaxial",
@@ -229,6 +237,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 3,
     "description": "Manley Mahi is a high-current, low-feedback push-pull tube integrated amplifier with Sabre DAC on board.",
     "specifications": {
       "output": "50 W per channel",
@@ -250,6 +259,7 @@
     "colors": [
       "Silver"
     ],
+    "stock": 17,
     "description": "Manley Neo-Classic 300B is a pure single-ended tube power amp using 300B triodes for rich musicality.",
     "specifications": {
       "output": "18 W per channel",
@@ -269,6 +279,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 0,
     "description": "Snapper combines a tube preamp with solid-state power stage for high-output, low distortion.",
     "specifications": {
       "output": "150 W",
@@ -288,6 +299,7 @@
     "colors": [
       "Silver"
     ],
+    "stock": 6,
     "description": "Reliable and sonic Halo power amplifier with elegant styling and solid 100 W output.",
     "specifications": {
       "output": "100 W per channel",
@@ -306,6 +318,7 @@
     "colors": [
       "Silver"
     ],
+    "stock": 8,
     "description": "Two-knob precision passive preamplifier from Creek with beautiful build and sonic neutrality.",
     "specifications": {
       "type": "Passive",
@@ -325,6 +338,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 5,
     "description": "Classic 7100 is a balanced tube preamp with MM phono stage and plenty of inputs.",
     "specifications": {
       "tubes": "12AX7",
@@ -342,9 +356,8 @@
     "type": "Halo P-3 Tube Preamplifier",
     "output": "Line",
     "price": "10,999.00",
-    "colors": [
-      "Silver"
-    ],
+    "colors": [ "Silver", "Yellow" ],
+    "stock": 8,
     "description": "P-3 builds on Classic design with improved phono, more inputs and refined sound.",
     "specifications": {
       "tubes": "12AX7",
