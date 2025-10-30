@@ -1,18 +1,31 @@
 import express from "express";
+import Database from "better-sqlite3";
 import bcrypt from "bcrypt";
 import fs from "fs-extra";
 import path from "path";
 import cors from "cors";
 
 const app = express();
-
-const PORT = process.env.PORT || 3000;
-
 app.use(cors()); // allow all origins/routes
 
 // Middleware
 app.use(express.json());
 app.use(express.static("public")); // ✅ Serve all images & static assets
+
+// Ensure data folder exists
+if (!fs.existsSync("data")) fs.mkdirSync("data");
+
+// Initialize database
+const db = new Database("data/newsletter.db");
+
+// Create table if it doesn’t exist
+db.prepare(`
+  CREATE TABLE IF NOT EXISTS newsletter (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    email TEXT UNIQUE NOT NULL,
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP
+  )
+`).run();
 
 // === Helper Functions ===
 async function readJSON(file) {
@@ -158,35 +171,69 @@ app.get("/products", async (req, res) => {
 // });
 
 // === NEWSLETTER ===
-app.get("/newsletter", async (req, res) => {
-  const newsletter = await readJSON("data/newsletter.json");
-  res.json(newsletter);
+
+app.get("/newsletter", (req, res) => {
+  const rows = db.prepare("SELECT * FROM newsletter").all();
+  res.json(rows);
 });
 
-// New POST route
-app.post("/newsletter", async (req, res) => {
+app.get("/newsletter", (req, res) => {
+  const rows = db.prepare("SELECT * FROM newsletter").all();
+  res.json(rows);
+});
+
+// POST /newsletter — add new email
+app.post("/newsletter", (req, res) => {
   const { email } = req.body;
 
   if (!email) {
     return res.status(400).json({ error: "Email is required" });
   }
 
-  const newsletter = await readJSON("data/newsletter.json");
-  
-  // Optional: avoid duplicates
-  if (newsletter.some(item => item.email === email)) {
-    return res.status(400).json({ error: "Email already subscribed" });
+  try {
+    const stmt = db.prepare("INSERT INTO newsletter (email) VALUES (?)");
+    stmt.run(email);
+    res.status(201).json({ message: "Subscribed successfully", email });
+  } catch (err) {
+    if (err.code === "SQLITE_CONSTRAINT_UNIQUE") {
+      res.status(400).json({ error: "Email already subscribed" });
+    } else {
+      console.error(err);
+      res.status(500).json({ error: "Database error" });
+    }
   }
-
-  newsletter.push({ email });
-  await writeJSON("data/newsletter.json", newsletter);
-
-  res.status(201).json({ message: "Subscribed successfully", email });
 });
+
+// app.get("/newsletter", async (req, res) => {
+//   const newsletter = await readJSON("data/newsletter.json");
+//   res.json(newsletter);
+// });
+
+// New POST route
+// app.post("/newsletter", async (req, res) => {
+//   const { email } = req.body;
+
+//   if (!email) {
+//     return res.status(400).json({ error: "Email is required" });
+//   }
+
+//   const newsletter = await readJSON("data/newsletter.json");
+  
+//   // Optional: avoid duplicates
+//   if (newsletter.some(item => item.email === email)) {
+//     return res.status(400).json({ error: "Email already subscribed" });
+//   }
+
+//   newsletter.push({ email });
+//   await writeJSON("data/newsletter.json", newsletter);
+
+//   res.status(201).json({ message: "Subscribed successfully", email });
+// });
 
 
 
 // === SERVER START ===
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () =>
   console.log(`✅ Server running on port ${PORT}`)
 );
