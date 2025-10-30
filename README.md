@@ -137,7 +137,9 @@ http://localhost:3000/products
 
 http://localhost:3000/users
 
-http://localhost:3000/history
+http://localhost:3000/about
+
+http://localhost:3000/newsletter
 
 # Render will automatically redeploy your app with the new data.
 

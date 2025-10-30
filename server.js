@@ -36,7 +36,7 @@ async function writeJSON(file, data) {
 
 // === PRODUCTS ===
 app.get("/products", async (req, res) => {
-  const products = await readJSON("data/products.json");
+  const products = await readJSON("data/products.json"); // uses readJSON
 
   // 👇 Auto-generate full image URLs
   const baseUrl = `${req.protocol}://${req.get("host")}/`;
@@ -158,10 +158,10 @@ app.get("/products", async (req, res) => {
 // });
 
 // === NEWSLETTER ===
-// app.get("/newsletter", async (req, res) => {
-//   const newsletter = await readJSON("data/newsletter.json");
-//   res.json(newsletter);
-// });
+app.get("/newsletter", async (req, res) => {
+  const newsletter = await readJSON("data/newsletter.json");
+  res.json(newsletter);
+});
 
 
 // === SERVER START ===
