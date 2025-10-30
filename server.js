@@ -163,6 +163,28 @@ app.get("/newsletter", async (req, res) => {
   res.json(newsletter);
 });
 
+// New POST route
+app.post("/newsletter", async (req, res) => {
+  const { email } = req.body;
+
+  if (!email) {
+    return res.status(400).json({ error: "Email is required" });
+  }
+
+  const newsletter = await readJSON("data/newsletter.json");
+  
+  // Optional: avoid duplicates
+  if (newsletter.some(item => item.email === email)) {
+    return res.status(400).json({ error: "Email already subscribed" });
+  }
+
+  newsletter.push({ email });
+  await writeJSON("data/newsletter.json", newsletter);
+
+  res.status(201).json({ message: "Subscribed successfully", email });
+});
+
+
 
 // === SERVER START ===
 app.listen(PORT, () =>
