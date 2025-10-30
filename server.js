@@ -177,11 +177,6 @@ app.get("/newsletter", (req, res) => {
   res.json(rows);
 });
 
-app.get("/newsletter", (req, res) => {
-  const rows = db.prepare("SELECT * FROM newsletter").all();
-  res.json(rows);
-});
-
 // POST /newsletter — add new email
 app.post("/newsletter", (req, res) => {
   const { email } = req.body;
