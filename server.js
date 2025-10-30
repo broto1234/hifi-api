@@ -47,6 +47,11 @@ async function writeJSON(file, data) {
 //   res.json(products);
 // });
 
+app.post("*", (req, res, next) => {
+  console.log("📬 POST hit:", req.originalUrl);
+  next();
+});
+
 // === PRODUCTS ===
 app.get("/products", async (req, res) => {
   const products = await readJSON("data/products.json"); // uses readJSON
