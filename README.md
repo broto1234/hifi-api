@@ -80,7 +80,7 @@ Open Insomnia and test your endpoints:
 
 Method:GET URL:http://localhost:3000/products  Send
 
-Method:GET URL:http://localhost:3000/products/101  Send
+Method:GET URL:http://localhost:3000/products/01  Send
 
 Method:GET URL:http://localhost:3000/about  Send
 
@@ -135,6 +135,8 @@ NB: Use this URL in Insomnia instead of localhost:3000 to test all endpoints onl
 # Test these URLs in your browser:
 http://localhost:3000/products
 
+http://localhost:3000/products/1
+
 http://localhost:3000/users
 
 http://localhost:3000/about
@@ -146,7 +148,6 @@ http://localhost:3000/newsletter
 👉 After deployment, check again:
 
 https://hifi-api-f4du.onrender.com/products
-
+https://hifi-api-f4du.onrender.com/products/1
 https://hifi-api-f4du.onrender.com/users
-
 and soon ...
