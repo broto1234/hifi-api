@@ -148,6 +148,9 @@ http://localhost:3000/newsletter
 👉 After deployment, check again:
 
 https://hifi-api-f4du.onrender.com/products
+
 https://hifi-api-f4du.onrender.com/products/1
+
 https://hifi-api-f4du.onrender.com/users
+
 and soon ...
