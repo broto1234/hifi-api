@@ -68,28 +68,28 @@ app.get("/products", async (req, res) => {
   res.json(updatedProducts);
 });
 
-// app.get("/products/:param", async (req, res) => {
-//   const products = await readJSON("data/products.json");
-//   const param = req.params.param.toLowerCase();
+app.get("/products/:param", async (req, res) => {
+  const products = await readJSON("data/products.json");
+  const param = req.params.param.toLowerCase();
 
-//   const product = products.find(
-//     (p) => p.id == param || (p.name && p.name.toLowerCase() === param)
-//   );
+  const product = products.find(
+    (p) => p.id == param || (p.name && p.name.toLowerCase() === param)
+  );
 
-//   if (!product)
-//     return res.status(404).json({ message: "Product not found" });
+  if (!product)
+    return res.status(404).json({ message: "Product not found" });
 
-//   // Add full image URL for this one product
-//   const baseUrl = `${req.protocol}://${req.get("host")}/`;
-//   const productWithImage = {
-//     ...product,
-//     image: product.image.startsWith("http")
-//       ? product.image
-//       : `${baseUrl}${product.image}`,
-//   };
+  // Add full image URL for this one product
+  const baseUrl = `${req.protocol}://${req.get("host")}/`;
+  const productWithImage = {
+    ...product,
+    image: product.image.startsWith("http")
+      ? product.image
+      : `${baseUrl}${product.image}`,
+  };
 
-//   res.json(productWithImage);
-// });
+  res.json(productWithImage);
+});
 
 
 // === USERS & AUTH ===
