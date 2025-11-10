@@ -172,7 +172,7 @@
     "colors": [
       "Silver"
     ],
-    "stock": 4,
+    "stock": 14,
     "description": "High-quality Exposure DVD player, HDMI output, builds on 2010S audio sibling’s pedigree.",
     "specifications": {
       "output": "HDMI, Optical",
@@ -318,7 +318,7 @@
     "colors": [
       "Silver"
     ],
-    "stock": 8,
+    "stock": 0,
     "description": "Two-knob precision passive preamplifier from Creek with beautiful build and sonic neutrality.",
     "specifications": {
       "type": "Passive",
@@ -378,6 +378,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 3,
     "description": "Ultra-compact preamplifier with Burr-Brown DAC, RIAA phono and USB input.",
     "specifications": {
       "dac type": "Burr-Brown PCM5102",
@@ -397,6 +398,7 @@
     "colors": [
       "White"
     ],
+    "stock": 1,
     "description": "Elegant wall-mount speaker from Bösendorfer, designed for music rooms and piano accompaniment.",
     "specifications": {
       "configuration": "2-way",
@@ -416,6 +418,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 4,
     "description": "Small nearfield monitor with accurate midrange and silky highs - ideal for audiophile desktop setups.",
     "specifications": {
       "configuration": "2-way",
@@ -435,6 +438,7 @@
     "colors": [
       "Oak"
     ],
+    "stock": 8,
     "description": "Fully capable bookshelf speaker with Harbeth’s musical midrange and natural presentation.",
     "specifications": {
       "configuration": "2.5-way",
@@ -454,6 +458,7 @@
     "colors": [
       "Walnut"
     ],
+    "stock": 8,
     "description": "Large floor-stand harbeth Monitor 30 with extended bass and exquisite tone balance.",
     "specifications": {
       "configuration": "2-way",
@@ -473,6 +478,7 @@
     "colors": [
       "Red Oak"
     ],
+    "stock": 0,
     "description": "Compact bookshelf speaker from Harbeth with vivid musicality and mid-centric clarity.",
     "specifications": {
       "configuration": "2-way",
@@ -493,6 +499,7 @@
     "colors": [
       "Silver"
     ],
+    "stock": 12,
     "description": "Compact 50 W integrated amp from Creek; great tonal neutrality and good feature set (MM phono, remote).",
     "specifications": {
       "output": "50 W",
@@ -513,6 +520,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 7,
     "description": "Classic 5350 Special Edition is a robust integrated amp with balanced outputs and classic sound.",
     "specifications": {
       "output": "2x125 W",
@@ -533,6 +541,7 @@
     "colors": [
       "Silver"
     ],
+    "stock": 9,
     "description": "Destiny integrated from Creek with upgraded preamp and ample power for demanding speakers.",
     "specifications": {
       "output": "2x100 W",
@@ -553,6 +562,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 0,
     "description": "Hybrid pre/power amp with tube front-end and solid-state output—clean, powerful, musical.",
     "specifications": {
       "output": "150 W",
@@ -572,6 +582,7 @@
     "colors": [
       "Silver"
     ],
+    "stock": 2,
     "description": "Manley Stingray II tube hybrid integrated amp with Sabre DAC and MM/MC phono.",
     "specifications": {
       "output": "75 W",
@@ -591,6 +602,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 17,
     "description": "Entry-level turntable with Ortofon OM-10 cartridge, lightweight tonearm and acrylic platter.",
     "specifications": {
       "speed": "33/45 RPM",
@@ -609,6 +621,7 @@
     "colors": [
       "Red"
     ],
+    "stock": 16,
     "description": "Red lacquer edition of Debut LLL, with upgraded platter and belt-drive design.",
     "specifications": {
       "speed": "33/45 RPM",
@@ -627,6 +640,7 @@
     "colors": [
       "Yellow"
     ],
+    "stock": 14,
     "description": "Yellow lacquer Debut LLL; same features as red version — stylish and sonically rewarding.",
     "specifications": {
       "speed": "33/45 RPM",
@@ -645,6 +659,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 11,
     "description": "RPM 5 Carbon turntable with carbon tonearm, precision bearing, and sleek design.",
     "specifications": {
       "speed": "33/45 RPM",
@@ -662,6 +677,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 5,
     "description": "High-end RPM 10 turntable with carbon tonearm, inverted bearing and silent motor.",
     "specifications": {
       "speed": "33/45 RPM",
@@ -680,6 +696,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 3,
     "description": "Compact single-ended tube amplifier based on 2A3/300B design, sweet and musical.",
     "specifications": {
       "output": "10 W per channel",
@@ -699,6 +716,7 @@
     "colors": [
       "Silver"
     ],
+    "stock": 14,
     "description": "25 W tube amp in push-pull configuration, delivering clean and warm tube tone.",
     "specifications": {
       "output": "25 W per channel",
@@ -718,6 +736,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 7,
     "description": "Single-ended 300B tube amplifier, rich midrange and full-bodied tonality.",
     "specifications": {
       "output": "18 W per channel",
@@ -737,6 +756,7 @@
     "colors": [
       "Silver"
     ],
+    "stock": 4,
     "description": "Advanced 300B tube amp with upgraded components for smoother dynamics.",
     "specifications": {
       "output": "20 W per channel",
@@ -756,6 +776,7 @@
     "colors": [
       "Black"
     ],
+    "stock": 6,
     "description": "Powerful 40 W 300B tube amplifier, dynamic yet musical—great for demanding speakers.",
     "specifications": {
       "output": "40 W per channel",

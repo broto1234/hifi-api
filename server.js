@@ -47,10 +47,10 @@ async function writeJSON(file, data) {
 //   res.json(products);
 // });
 
-app.post("*", (req, res, next) => {
-  console.log("📬 POST hit:", req.originalUrl);
-  next();
-});
+// app.post("*", (req, res, next) => {
+//   console.log("📬 POST hit:", req.originalUrl);
+//   next();
+// });
 
 // === PRODUCTS ===
 app.get("/products", async (req, res) => {
@@ -176,33 +176,99 @@ app.get("/products", async (req, res) => {
 // });
 
 // === NEWSLETTER ===
-
+// GET /newsletter — get all emails
 app.get("/newsletter", (req, res) => {
   const rows = db.prepare("SELECT * FROM newsletter").all();
   res.json(rows);
 });
 
+
 // POST /newsletter — add new email
-app.post("/newsletter", (req, res) => {
+app.post("/newsletter", async (req, res) => {
   const { email } = req.body;
 
-  if (!email) {
-    return res.status(400).json({ error: "Email is required" });
-  }
+  if (!email) return res.status(400).json({ error: "Email is required" });
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) return res.status(400).json({ error: "Invalid email" });
 
   try {
-    const stmt = db.prepare("INSERT INTO newsletter (email) VALUES (?)");
-    stmt.run(email);
+    const file = "data/newsletter.json";
+
+    // ✅ Ensure file exists
+    await fs.ensureFile(file);
+
+    // ✅ Read existing newsletter emails
+    const content = await fs.readFile(file, "utf-8");
+    const newsletter = content.trim() ? JSON.parse(content) : [];
+
+    // ✅ Avoid duplicates
+    if (newsletter.some(e => e.email === email)) {
+      return res.status(400).json({ error: "Email already subscribed" });
+    }
+
+    // ✅ Add new email
+    newsletter.push({ email });
+    await fs.writeFile(file, JSON.stringify(newsletter, null, 2));
+    
+    // Send success message
     res.status(201).json({ message: "Subscribed successfully", email });
   } catch (err) {
-    if (err.code === "SQLITE_CONSTRAINT_UNIQUE") {
-      res.status(400).json({ error: "Email already subscribed" });
-    } else {
-      console.error(err);
-      res.status(500).json({ error: "Database error" });
-    }
+    console.error(err);
+    res.status(500).json({ error: "Server error" });
   }
 });
+
+// app.post("/newsletter", (req, res) => {
+//   const { email } = req.body;
+
+//   // 1. Check that the email exists
+//   if (!email) {
+//     return res.status(400).json({ error: "Email is required" });
+//   }
+
+//   // 2. Validate email format using regex for backend validation
+//   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//   if (!emailRegex.test(email)) {
+//     return res.status(400).json({ error: "Invalid email format" });
+//   }
+//   try {
+//     const file = "data/newsletter.json";
+
+//     // Wrap in async function (inside route)
+//     await fs.ensureFile(file);
+//     const content = await fs.readFile(file, "utf-8");
+//     const newsletter = content.trim() ? JSON.parse(content) : [];
+
+//     if (newsletter.some(e => e.email === email)) {
+//       return res.status(400).json({ error: "Email already subscribed" });
+//     }
+
+//     newsletter.push({ email });
+//     await fs.writeFile(file, JSON.stringify(newsletter, null, 2));
+
+//     res.status(201).json({ message: "Subscribed successfully", email });
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ error: "Server error" });
+//   }
+
+
+//   // try {
+//   //   // 3. Insert into SQLite
+//   //   const stmt = db.prepare("INSERT INTO newsletter (email) VALUES (?)");
+//   //   stmt.run(email);
+//   //   res.status(201).json({ message: "Subscribed successfully", email });
+//   // } catch (err) {
+//   //   // 4. Handle duplicates
+//   //   if (err.code === "SQLITE_CONSTRAINT_UNIQUE") {
+//   //     res.status(400).json({ error: "Email already subscribed" });
+//   //   } else {
+//   //     console.error(err);
+//   //     res.status(500).json({ error: "Database error" });
+//   //   }
+//   // }
+// });
 
 // app.get("/newsletter", async (req, res) => {
 //   const newsletter = await readJSON("data/newsletter.json");
