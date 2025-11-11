@@ -68,6 +68,7 @@ app.get("/products", async (req, res) => {
   res.json(updatedProducts);
 });
 
+// GET /products/:param — get product by id or name
 app.get("/products/:param", async (req, res) => {
   const products = await readJSON("data/products.json");
   const param = req.params.param.toLowerCase();
@@ -90,6 +91,7 @@ app.get("/products/:param", async (req, res) => {
 
   res.json(productWithImage);
 });
+// ====== PRODUCTS END======
 
 
 // === USERS & AUTH ===
