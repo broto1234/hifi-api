@@ -1,7 +1,11 @@
 [
   {
     "id": 1,
-    "image": "Produktbilleder/cd_afspillere/creek_classic_cd.jpg",
+    "image": [
+      "Produktbilleder/cd_afspillere/creek_classic_cd.jpg",
+      "Produktbilleder/cd_afspillere/creek_Destiny_CD.jpg",
+      "Produktbilleder/cd_afspillere/creek_evo_cd .jpg"
+    ],
     "categories": "CD Afspillere",
     "brand": "Creek",
     "type": "Classic CD Player",

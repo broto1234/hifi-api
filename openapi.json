@@ -1,0 +1,139 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "HiFi API",
+    "version": "1.0.0",
+    "description": "API for products and newsletter subscription."
+  },
+  "servers": [
+    {
+      "url": "https://hifi-api-howz.onrender.com",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/products": {
+      "get": {
+        "summary": "Get all products",
+        "description": "Returns an array of all products with full image URLs.",
+        "responses": {
+          "200": {
+            "description": "A list of products",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": 1,
+                    "name": "Headphones",
+                    "price": 199.99,
+                    "image": "https://hifi-api-howz.onrender.com/images/headphones.png"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Speaker",
+                    "price": 299.99,
+                    "image": "https://hifi-api-howz.onrender.com/images/speaker.png"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/products/{param}": {
+      "get": {
+        "summary": "Get product by ID or name",
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "description": "The product ID or name",
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested product",
+            "content": {
+              "application/json": {
+                "example": {
+                  "id": 1,
+                  "name": "Headphones",
+                  "price": 199.99,
+                  "image": "https://hifi-api-howz.onrender.com/images/headphones.png"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Product not found",
+            "content": {
+              "application/json": {
+                "example": { "message": "Product not found" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/newsletter": {
+      "get": {
+        "summary": "Get all newsletter emails",
+        "responses": {
+          "200": {
+            "description": "Array of subscribed emails",
+            "content": {
+              "application/json": {
+                "example": [
+                  { "id": 1, "email": "example@example.com", "created_at": "2026-03-18T12:00:00Z" },
+                  { "id": 2, "email": "user@test.com", "created_at": "2026-03-18T12:05:00Z" }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Subscribe an email to the newsletter",
+        "requestBody": {
+          "required": true,
+          "description": "Email to subscribe",
+          "content": {
+            "application/json": {
+              "schema": { "type": "object", "properties": { "email": { "type": "string" } } },
+              "example": { "email": "newuser@example.com" }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Subscribed successfully",
+            "content": {
+              "application/json": {
+                "example": { "message": "Subscribed successfully", "email": "newuser@example.com" }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid email or already subscribed",
+            "content": {
+              "application/json": {
+                "example": { "error": "Email already subscribed" }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "content": {
+              "application/json": {
+                "example": { "error": "Server error" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
