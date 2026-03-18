@@ -138,11 +138,27 @@ app.post("/newsletter", async (req, res) => {
 // app.post("/register", async (req, res) => { ... });
 // app.post("/login", async (req, res) => { ... });
 
+
+app.get("/", (req, res) => {
+  res.send(`
+    <h1>HiFi API</h1>
+    <p>Welcome! Use the following endpoints:</p>
+    <ul>
+      <li><a href="/products">/products</a> - Get all products</li>
+      <li>/products/{id or name} - Get product by ID or name</li>
+      <li><a href="/newsletter">/newsletter</a> - Get all newsletter emails</li>
+      <li><a href="/openapi.json">/openapi.json</a> - API documentation</li>
+    </ul>
+  `);
+});
+
 // ===== SERVER START =====
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () =>
   console.log(`✅ Server running on port ${PORT}`)
 );
+
+
 // import express from "express";
 // import Database from "better-sqlite3";
 // import bcrypt from "bcrypt";

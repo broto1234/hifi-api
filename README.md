@@ -68,6 +68,8 @@ Test endpoints with **Insomnia**. Deployable to **Render.com**.
 3. Start the server:
   ```bash
   npm start
+  Or
+  node server.js
 ```
 
 4. Local API base URL:
