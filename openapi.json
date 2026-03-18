@@ -2,8 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "HiFi API",
-    "version": "1.0.0",
-    "description": "API for products and newsletter subscription"
+    "version": "1.0.0"
   },
   "servers": [
     {
@@ -16,41 +15,14 @@
         "summary": "Get all products",
         "responses": {
           "200": {
-            "description": "List of products"
+            "description": "OK"
           }
-        }
-      }
-    },
-    "/products/{param}": {
-      "get": {
-        "summary": "Get product by id or name",
-        "parameters": [
-          {
-            "name": "param",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": { "description": "Product found" },
-          "404": { "description": "Product not found" }
         }
       }
     },
     "/newsletter": {
-      "get": {
-        "summary": "Get all newsletter emails",
-        "responses": {
-          "200": {
-            "description": "List of emails"
-          }
-        }
-      },
       "post": {
-        "summary": "Subscribe to newsletter",
+        "summary": "Subscribe",
         "requestBody": {
           "required": true,
           "content": {
@@ -62,16 +34,14 @@
                     "type": "string"
                   }
                 }
-              },
-              "example": {
-                "email": "test@example.com"
               }
             }
           }
         },
         "responses": {
-          "201": { "description": "Subscribed successfully" },
-          "400": { "description": "Invalid email" }
+          "201": {
+            "description": "Created"
+          }
         }
       }
     }
