@@ -129,7 +129,7 @@ Method:POST URL:http://localhost:3000/login
 5. Click Create Web Service.
 
 After a few minutes, Render gives you a live URL, e.g.:
-  https://hifi-api-howz.onrender.com
+  https://hifi-api-f4du.onrender.com/
 
 NB: Use this URL in Insomnia instead of localhost:3000 to test all endpoints online.
 
