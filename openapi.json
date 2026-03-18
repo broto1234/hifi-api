@@ -7,13 +7,8 @@
   },
   "servers": [
     {
-      "url": "http://localhost:4000",
-      "description": "Local development"
+      "url": "http://localhost:4000/api/v1"
     }
-  ],
-  "tags": [
-    { "name": "Products" },
-    { "name": "Newsletter" }
   ],
   "paths": {
     "/products": {
