@@ -2,27 +2,120 @@
   "openapi": "3.0.0",
   "info": {
     "title": "HiFi API",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "description": "API for managing HiFi products and newsletter subscriptions."
   },
   "servers": [
     {
-      "url": "https://hifi-api-f4du.onrender.com"
+      "url": "https://hifi-api-f4du.onrender.com",
+      "description": "Production server"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Products",
+      "description": "Operations related to products"
+    },
+    {
+      "name": "Newsletter",
+      "description": "Newsletter subscription endpoints"
     }
   ],
   "paths": {
     "/products": {
       "get": {
+        "tags": ["Products"],
         "summary": "Get all products",
+        "description": "Returns a list of all HiFi products with full image URLs.",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": 1,
+                    "name": "HiFi Speaker",
+                    "price": 1999,
+                    "image": "https://hifi-api-f4du.onrender.com/images/speaker.jpg"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/products/{param}": {
+      "get": {
+        "tags": ["Products"],
+        "summary": "Get single product",
+        "description": "Fetch a product by ID or name.",
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "description": "Product ID or name",
+            "schema": {
+              "type": "string",
+              "example": "1"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Product found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "id": 1,
+                  "name": "HiFi Speaker",
+                  "price": 1999,
+                  "image": "https://hifi-api-f4du.onrender.com/images/speaker.jpg"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Product not found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "Product not found"
+                }
+              }
+            }
           }
         }
       }
     },
     "/newsletter": {
+      "get": {
+        "tags": ["Newsletter"],
+        "summary": "Get all newsletter emails",
+        "description": "Returns all subscribed emails.",
+        "responses": {
+          "200": {
+            "description": "List of emails",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": 1,
+                    "email": "test@example.com",
+                    "created_at": "2026-01-01 12:00:00"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
       "post": {
-        "summary": "Subscribe",
+        "tags": ["Newsletter"],
+        "summary": "Subscribe to newsletter",
+        "description": "Adds a new email to the newsletter list.",
         "requestBody": {
           "required": true,
           "content": {
@@ -31,16 +124,39 @@
                 "type": "object",
                 "properties": {
                   "email": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "test@example.com"
                   }
-                }
+                },
+                "required": ["email"]
+              },
+              "example": {
+                "email": "test@example.com"
               }
             }
           }
         },
         "responses": {
           "201": {
-            "description": "Created"
+            "description": "Subscribed successfully",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "Subscribed successfully",
+                  "email": "test@example.com"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Invalid email"
+                }
+              }
+            }
           }
         }
       }
