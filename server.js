@@ -1,148 +1,112 @@
 import express from "express";
-import Database from "better-sqlite3";
-import fs from "fs-extra";
-import path from "path";
-import cors from "cors";
 import swaggerUi from "swagger-ui-express";
+import swaggerJsdoc from "swagger-jsdoc";
 
 const app = express();
-
-// ===== Middleware =====
-app.use(cors());
 app.use(express.json());
-app.use(express.static("public"));
 
-// ===== Ensure data folder exists =====
-if (!fs.existsSync("data")) fs.mkdirSync("data");
-
-// ===== Initialize SQLite DB =====
-const db = new Database("data/newsletter.db");
-db.prepare(`
-  CREATE TABLE IF NOT EXISTS newsletter (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    email TEXT UNIQUE NOT NULL,
-    created_at TEXT DEFAULT CURRENT_TIMESTAMP
-  )
-`).run();
-
-// ===== Helper Functions =====
-async function readJSON(file) {
-  await fs.ensureFile(file);
-  const content = await fs.readFile(file, "utf-8");
-  return content.trim() ? JSON.parse(content) : [];
-}
-
-async function writeJSON(file, data) {
-  await fs.writeFile(file, JSON.stringify(data, null, 2));
-}
-
-// ===== OpenAPI / Swagger =====
-const openapiFile = path.join(process.cwd(), "openapi.json");
-app.use("/docs", swaggerUi.serve, async (req, res, next) => {
-  const swaggerDocument = await fs.readJSON(openapiFile);
-  swaggerUi.setup(swaggerDocument)(req, res, next);
-});
-app.get("/openapi.json", async (req, res) => {
-  res.sendFile(openapiFile);
+/* =========================
+   Swagger config
+========================= */
+const swaggerSpec = swaggerJsdoc({
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "HiFi API",
+      version: "1.0.0",
+      description: "API documentation",
+    },
+    servers: [
+      {
+        url: "https://hifi-api-f4du.onrender.com",
+      },
+    ],
+  },
+  apis: ["./server.js"], // since you're not using routes folder yet
 });
 
-// ===== API ROUTES =====
-const API_PREFIX = "/api/v1";
-
-// --- PRODUCTS ---
-app.get(`${API_PREFIX}/products`, async (req, res) => {
-  const products = await readJSON("data/products.json");
-  const baseUrl = `${req.protocol}://${req.get("host")}/`;
-
-  const updatedProducts = products.map((p) => {
-    const img = p && p.image ? p.image : "";
-    const imgStr = typeof img === "string" ? img.trim() : "";
-    const image = imgStr
-      ? imgStr.startsWith("http")
-        ? imgStr
-        : `${baseUrl}${imgStr}`
-      : "";
-    return { ...p, image };
-  });
-
-  res.json(updatedProducts);
+/* =========================
+   OpenAPI JSON
+========================= */
+app.get("/openapi.json", (req, res) => {
+  res.json(swaggerSpec);
 });
 
-app.get(`${API_PREFIX}/products/:param`, async (req, res) => {
-  const products = await readJSON("data/products.json");
-  const param = req.params.param.toLowerCase();
-
-  const product = products.find(
-    (p) => p.id == param || (p.name && p.name.toLowerCase() === param)
-  );
-
-  if (!product) return res.status(404).json({ message: "Product not found" });
-
-  const baseUrl = `${req.protocol}://${req.get("host")}/`;
-  const img = product && product.image ? product.image : "";
-  const imgStr = typeof img === "string" ? img.trim() : "";
-  const productWithImage = {
-    ...product,
-    image: imgStr
-      ? imgStr.startsWith("http")
-        ? imgStr
-        : `${baseUrl}${imgStr}`
-      : "",
-  };
-
-  res.json(productWithImage);
-});
-
-// --- NEWSLETTER ---
-app.get(`${API_PREFIX}/newsletter`, (req, res) => {
-  const rows = db.prepare("SELECT * FROM newsletter").all();
-  res.json(rows);
-});
-
-app.post(`${API_PREFIX}/newsletter`, async (req, res) => {
-  const { email } = req.body;
-  if (!email) return res.status(400).json({ error: "Email is required" });
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email))
-    return res.status(400).json({ error: "Invalid email" });
-
-  try {
-    const file = "data/newsletter.json";
-    await fs.ensureFile(file);
-    const content = await fs.readFile(file, "utf-8");
-    const newsletter = content.trim() ? JSON.parse(content) : [];
-
-    if (newsletter.some((e) => e.email === email))
-      return res.status(400).json({ error: "Email already subscribed" });
-
-    newsletter.push({ email });
-    await fs.writeFile(file, JSON.stringify(newsletter, null, 2));
-
-    // Save to SQLite
-    db.prepare("INSERT INTO newsletter (email) VALUES (?)").run(email);
-
-    res.status(201).json({ message: "Subscribed successfully", email });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Server error" });
-  }
-});
-
-// --- ROOT ---
+/* =========================
+   MAIN PAGE (Din Mægler style)
+========================= */
 app.get("/", (req, res) => {
+  const openApiUrl = "https://hifi-api-f4du.onrender.com/openapi.json";
+
   res.send(`
-    <h1>HiFi API</h1>
-    <p>Use the following endpoints:</p>
-    <ul>
-      <li><a href="${API_PREFIX}/products">${API_PREFIX}/products</a></li>
-      <li>${API_PREFIX}/products/{id or name}</li>
-      <li><a href="${API_PREFIX}/newsletter">${API_PREFIX}/newsletter</a></li>
-      <li><a href="/docs">/docs</a> - Swagger UI</li>
-    </ul>
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>HiFi API</title>
+    <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist/swagger-ui.css" />
+    <style>
+      body { margin: 0; font-family: Arial; }
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px;
+        background: #6c5ce7;
+        color: white;
+      }
+      .btn {
+        background: white;
+        color: #6c5ce7;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="topbar">
+      <h2>HiFi API</h2>
+      <a class="btn" href="https://insomnia.rest/run/?label=HiFi%20API&uri=${encodeURIComponent(openApiUrl)}" target="_blank">
+        Run in Insomnia
+      </a>
+    </div>
+
+    <div id="swagger-ui"></div>
+
+    <script src="https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js"></script>
+    <script>
+      SwaggerUIBundle({
+        url: "/openapi.json",
+        dom_id: "#swagger-ui"
+      });
+    </script>
+
+  </body>
+  </html>
   `);
 });
 
-// ===== START SERVER =====
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+/* =========================
+   Example endpoint
+========================= */
+
+/**
+ * @swagger
+ * /api/v1/products:
+ *   get:
+ *     summary: Get all products
+ *     tags: [Products]
+ *     responses:
+ *       200:
+ *         description: Success
+ */
+app.get("/api/v1/products", (req, res) => {
+  res.json([{ name: "Speaker" }]);
+});
+
+/* ========================= */
+app.listen(3000, () => {
+  console.log("Server running");
+});

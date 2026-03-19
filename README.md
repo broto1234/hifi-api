@@ -74,7 +74,7 @@ Test endpoints with **Insomnia**. Deployable to **Render.com**.
 
 4. Local API base URL:
 
-http://localhost:3000
+http://localhost:4000
 
 ## Test locally
 
